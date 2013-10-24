@@ -24,7 +24,7 @@
     "d": "git://github.com/medikoo/d.git",
     "es5-ext": "git://github.com/medikoo/es5-ext.git",
     "es6-iterator": "git://github.com/medikoo/es6-iterator.git",
-    "event-emitter": "git://github.com/medikoo/event-emitter.git"
+    "time-uuid": "git://github.com/medikoo/time-uuid.git"
   },
   "devDependencies": {
     "tad": "~0.1.19"
