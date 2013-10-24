@@ -55,7 +55,7 @@ map.has(obj);        // false
 ```
 
 ### Installation
-#### NPM
+#### npm
 
 In your project path:
 
