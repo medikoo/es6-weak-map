@@ -1,0 +1,33 @@
+{
+  "name": "es6-weak-map",
+  "version": "0.0.0",
+  "description": "ECMAScript6 WeakMap polyfill",
+  "author": "Mariusz Nowak <medyk@medikoo.com> (http://www.medikoo.com/)",
+  "keywords": [
+    "map",
+    "weakmap",
+    "collection",
+    "es6",
+    "harmony",
+    "list",
+    "hash",
+    "gc"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/medikoo/es6-weak-map.git"
+  },
+  "scripts": {
+    "test": "node ./node_modules/tad/bin/tad"
+  },
+  "dependencies": {
+    "d": "git://github.com/medikoo/d.git",
+    "es5-ext": "git://github.com/medikoo/es5-ext.git",
+    "es6-iterator": "git://github.com/medikoo/es6-iterator.git",
+    "event-emitter": "git://github.com/medikoo/event-emitter.git"
+  },
+  "devDependencies": {
+    "tad": "~0.1.19"
+  },
+  "license": "MIT"
+}
