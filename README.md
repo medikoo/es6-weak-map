@@ -1,7 +1,7 @@
 # es6-weak-map
 ## WeakMap collection as specified in ECMAScript6
 
-_Roughly inspired by Mark Miller's and Kris Kowal's [WeakMap implemenatation](https://github.com/drses/weak-map)_.
+_Roughly inspired by Mark Miller's and Kris Kowal's [WeakMap implementation](https://github.com/drses/weak-map)_.
 
 Differences are:
 - Assumes compliant ES5 environment (no weird ES3 workarounds or hacks)
