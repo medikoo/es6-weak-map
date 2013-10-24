@@ -1,9 +1,9 @@
 # es6-weak-map
 ## WeakMap collection as specified in ECMAScript6
 
-_Roughly inspired by Mark Miller and Kris Kowal [WeakMap implemenatation](https://github.com/drses/weak-map)_.
+_Roughly inspired by Mark Miller's and Kris Kowal's [WeakMap implemenatation](https://github.com/drses/weak-map)_.
 
-Difference are:
+Differences are:
 - Assumes compliant ES5 environment (no weird ES3 workarounds or hacks)
 - Well modularized CJS style
 - Based on one solution.
@@ -11,7 +11,7 @@ Difference are:
 ### Limitations
 
 - Will fail on non extensible objects provided as keys
-- While `clear` method is provided, it's not perfectly spec compliant. If some objects where saved as _values_, they need to be removed via `delete`. Otherwise they'll remain infinitely attached to _key_ object (that means, they'll be free for GC only if _key_ object was collected as well).
+- While `clear` method is provided, it's not perfectly spec compliant. If some objects were saved as _values_, they need to be removed via `delete`. Otherwise they'll remain infinitely attached to _key_ object (that means, they'll be free for GC only if _key_ object was collected as well).
 
 ### Usage
 
@@ -35,7 +35,7 @@ var WeakMap = require('es6-weak-map/polyfill');
 
 #### API
 
-Best is to refer to [specification](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-weakmap-objects). Still if you want quick look, follow examples:
+Best is to refer to [specification](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-weakmap-objects). Still if you want quick look, follow example:
 
 ```javascript
 var WeakMap = require('es6-weak-map');
