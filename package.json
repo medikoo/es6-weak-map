@@ -24,6 +24,7 @@
     "d": "git://github.com/medikoo/d.git",
     "es5-ext": "git://github.com/medikoo/es5-ext.git",
     "es6-iterator": "git://github.com/medikoo/es6-iterator.git",
+    "es6-symbol": "git://github.com/medikoo/es6-symbol.git",
     "time-uuid": "git://github.com/medikoo/time-uuid.git"
   },
   "devDependencies": {
