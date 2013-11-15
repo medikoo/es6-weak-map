@@ -1,13 +1,14 @@
 'use strict';
 
-var setPrototypeOf = require('es5-ext/object/set-prototype-of')
-  , object         = require('es5-ext/object/valid-object')
-  , value          = require('es5-ext/object/valid-value')
-  , d              = require('d/d')
-  , getIterator    = require('es6-iterator/get')
-  , forOf          = require('es6-iterator/for-of')
-  , genId          = require('time-uuid')
-  , isNative       = require('./is-native-implemented')
+var setPrototypeOf    = require('es5-ext/object/set-prototype-of')
+  , object            = require('es5-ext/object/valid-object')
+  , value             = require('es5-ext/object/valid-value')
+  , d                 = require('d/d')
+  , getIterator       = require('es6-iterator/get')
+  , forOf             = require('es6-iterator/for-of')
+  , toStringTagSymbol = require('es6-symbol').toStringTag
+  , genId             = require('time-uuid')
+  , isNative          = require('./is-native-implemented')
 
   , isArray = Array.isArray, defineProperty = Object.defineProperty
   , hasOwnProperty = Object.prototype.hasOwnProperty
@@ -60,6 +61,6 @@ Object.defineProperties(WeakMapPoly.prototype, {
 		defineProperty(object(key), this.__weakMapData__, d('c', value));
 		return this;
 	}),
-	'@@toStringTag': d('c', 'WeakMap'),
 	toString: d(function () { return '[object WeakMap]'; })
 });
+defineProperty(WeakMapPoly.prototype, toStringTagSymbol, d('c', 'WeakMap'));
