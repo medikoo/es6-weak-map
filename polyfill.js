@@ -3,7 +3,7 @@
 var setPrototypeOf    = require('es5-ext/object/set-prototype-of')
   , object            = require('es5-ext/object/valid-object')
   , value             = require('es5-ext/object/valid-value')
-  , d                 = require('d/d')
+  , d                 = require('d')
   , getIterator       = require('es6-iterator/get')
   , forOf             = require('es6-iterator/for-of')
   , toStringTagSymbol = require('es6-symbol').toStringTag
