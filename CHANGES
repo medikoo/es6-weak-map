@@ -1,0 +1,7 @@
+v0.1.0  --  2014.04.29
+* Assure to depend only npm hosted dependencies
+* Update to use latest versions of dependencies
+* Use ES6 symbols internally
+
+v0.0.0  --  2013.10.24
+Initial (dev version)
