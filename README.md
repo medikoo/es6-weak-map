@@ -13,6 +13,12 @@ Differences are:
 - Will fail on non extensible objects provided as keys
 - While `clear` method is provided, it's not perfectly spec compliant. If some objects were saved as _values_, they need to be removed via `delete`. Otherwise they'll remain infinitely attached to _key_ object (that means, they'll be free for GC only if _key_ object was collected as well).
 
+### Installation
+
+	$ npm install es6-weak-map
+
+To port it to Browser or any other (non CJS) environment, use your favorite CJS bundler. No favorite yet? Try: [Browserify](http://browserify.org/), [Webmake](https://github.com/medikoo/modules-webmake) or [Webpack](http://webpack.github.io/)
+
 ### Usage
 
 If you want to make sure your environment implements `WeakMap`, do:
@@ -53,17 +59,6 @@ map.set(obj, 'bar'); // map
 map.clear();         // undefined
 map.has(obj);        // false
 ```
-
-### Installation
-#### npm
-
-In your project path:
-
-	$ npm install es6-weak-map
-
-##### Browser
-
-You can easily bundle _es6-weak-map_ for browser with [modules-webmake](https://github.com/medikoo/modules-webmake)
 
 ## Tests [![Build Status](https://travis-ci.org/medikoo/es6-weak-map.png)](https://travis-ci.org/medikoo/es6-weak-map)
 
