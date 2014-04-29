@@ -18,14 +18,14 @@
     "url": "git://github.com/medikoo/es6-weak-map.git"
   },
   "dependencies": {
-    "d": "git://github.com/medikoo/d.git",
-    "es5-ext": "git://github.com/medikoo/es5-ext.git",
-    "es6-iterator": "git://github.com/medikoo/es6-iterator.git",
-    "es6-symbol": "git://github.com/medikoo/es6-symbol.git",
-    "time-uuid": "git://github.com/medikoo/time-uuid.git"
+    "d": "~0.1.1",
+    "es5-ext": "~0.10.2",
+    "es6-iterator": "~0.1.1",
+    "es6-symbol": "0.1.x",
+    "time-uuid": "0.2.x"
   },
   "devDependencies": {
-    "tad": "~0.1.19"
+    "tad": "0.2.x"
   },
   "scripts": {
     "test": "node ./node_modules/tad/bin/tad"
