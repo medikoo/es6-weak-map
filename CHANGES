@@ -1,3 +1,6 @@
+v0.1.1  -- 2014.05.15
+* Improve valid WeakMap detection
+
 v0.1.0  --  2014.04.29
 * Assure to depend only npm hosted dependencies
 * Update to use latest versions of dependencies
