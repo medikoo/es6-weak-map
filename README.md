@@ -60,6 +60,6 @@ map.clear();         // undefined
 map.has(obj);        // false
 ```
 
-## Tests [![Build Status](https://travis-ci.org/medikoo/es6-weak-map.png)](https://travis-ci.org/medikoo/es6-weak-map)
+## Tests [![Build Status](https://travis-ci.org/medikoo/es6-weak-map.svg)](https://travis-ci.org/medikoo/es6-weak-map)
 
 	$ npm test
