@@ -7,12 +7,21 @@ var setPrototypeOf    = require('es5-ext/object/set-prototype-of')
   , getIterator       = require('es6-iterator/get')
   , forOf             = require('es6-iterator/for-of')
   , toStringTagSymbol = require('es6-symbol').toStringTag
-  , genId             = require('time-uuid')
   , isNative          = require('./is-native-implemented')
 
-  , isArray = Array.isArray, defineProperty = Object.defineProperty
+  , isArray = Array.isArray, defineProperty = Object.defineProperty, random = Math.random
   , hasOwnProperty = Object.prototype.hasOwnProperty
-  , WeakMapPoly;
+  , genId, WeakMapPoly;
+
+genId = (function () {
+	var generated = Object.create(null);
+	return function () {
+		var id;
+		do { id = random().toString(36).slice(2); } while (generated[id]);
+		generated[id] = true;
+		return id;
+	};
+}());
 
 module.exports = WeakMapPoly = function (/*iterable*/) {
 	var iterable = arguments[0];

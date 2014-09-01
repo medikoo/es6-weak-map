@@ -21,8 +21,7 @@
     "d": "~0.1.1",
     "es5-ext": "~0.10.4",
     "es6-iterator": "~0.1.1",
-    "es6-symbol": "0.1.x",
-    "time-uuid": "~0.2.1"
+    "es6-symbol": "0.1.x"
   },
   "devDependencies": {
     "tad": "0.2.x"
