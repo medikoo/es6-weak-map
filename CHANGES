@@ -1,4 +1,8 @@
-v0.1.1  -- 2014.05.15
+v0.1.2  --  2014.09.01
+* Use internal random and unique id generator instead of external (time-uuid based).
+  Global uniqueness is not needed in scope of this module. Fixes #1
+
+v0.1.1  --  2014.05.15
 * Improve valid WeakMap detection
 
 v0.1.0  --  2014.04.29
