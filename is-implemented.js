@@ -3,6 +3,7 @@
 module.exports = function () {
 	var map;
 	if (typeof WeakMap !== 'function') return false;
+	if (String(WeakMap.prototype) !== '[object WeakMap]') return false;
 	map = new WeakMap();
 	if (typeof map.set !== 'function') return false;
 	if (map.set({}, 1) !== map) return false;
