@@ -21,10 +21,6 @@ module.exports = function () {
 	if (typeof weakMap.has !== 'function') return false;
 	if (weakMap.get(x) !== 'one') return false;
 
-	// Non new call
-	try { weakMap = WeakMap(); } catch (e) { return false; } //jslint: ignore
-	if (!weakMap) return false;
-
 	// Extendable
 	if (setPrototypeOf) {
 		SubWeakMap = function () { WeakMap.apply(this, arguments); };
