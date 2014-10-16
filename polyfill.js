@@ -25,7 +25,7 @@ genId = (function () {
 
 module.exports = WeakMapPoly = function (/*iterable*/) {
 	var iterable = arguments[0];
-	if (!(this instanceof WeakMapPoly)) return new WeakMapPoly(iterable);
+	if (!(this instanceof WeakMapPoly)) throw new TypeError('Constructor requires \'new\'');
 	if (this.__weakMapData__ !== undefined) {
 		throw new TypeError(this + " cannot be reinitialized");
 	}
