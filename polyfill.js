@@ -10,7 +10,7 @@ var setPrototypeOf    = require('es5-ext/object/set-prototype-of')
   , isNative          = require('./is-native-implemented')
 
   , isArray = Array.isArray, defineProperty = Object.defineProperty, random = Math.random
-  , hasOwnProperty = Object.prototype.hasOwnProperty
+  , hasOwnProperty = Object.prototype.hasOwnProperty, getPrototypeOf = Object.getPrototypeOf
   , genId, WeakMapPoly;
 
 genId = (function () {
@@ -24,20 +24,20 @@ genId = (function () {
 }());
 
 module.exports = WeakMapPoly = function (/*iterable*/) {
-	var iterable = arguments[0];
+	var iterable = arguments[0], self;
 	if (!(this instanceof WeakMapPoly)) throw new TypeError('Constructor requires \'new\'');
-	if (this.__weakMapData__ !== undefined) {
-		throw new TypeError(this + " cannot be reinitialized");
-	}
+	if (isNative && setPrototypeOf) self = setPrototypeOf(new WeakMap(), getPrototypeOf(this));
+	else self = this;
 	if (iterable != null) {
 		if (!isArray(iterable)) iterable = getIterator(iterable);
 	}
-	defineProperty(this, '__weakMapData__', d('c', '$weakMap$' + genId()));
+	defineProperty(self, '__weakMapData__', d('c', '$weakMap$' + genId()));
 	if (!iterable) return;
 	forOf(iterable, function (val) {
 		value(val);
-		this.set(val[0], val[1]);
-	}, this);
+		self.set(val[0], val[1]);
+	});
+	return self;
 };
 
 if (isNative) {
