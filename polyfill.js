@@ -32,7 +32,7 @@ module.exports = WeakMapPoly = function (/*iterable*/) {
 		if (!isArray(iterable)) iterable = getIterator(iterable);
 	}
 	defineProperty(self, '__weakMapData__', d('c', '$weakMap$' + genId()));
-	if (!iterable) return;
+	if (!iterable) return self;
 	forOf(iterable, function (val) {
 		value(val);
 		self.set(val[0], val[1]);

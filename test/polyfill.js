@@ -19,4 +19,9 @@ module.exports = function (T, a) {
 	a(map.has(y), true, "Has: pre clear");
 	map.clear();
 	a(map.has(y), false, "Has: after clear");
+
+	a.h1("Empty initialization");
+	map = new T();
+	map.set(x, 'bar');
+	a(map.get(x), 'bar');
 };
