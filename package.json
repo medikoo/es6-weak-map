@@ -19,7 +19,7 @@
   },
   "dependencies": {
     "d": "~0.1.1",
-    "es5-ext": "~0.10.4",
+    "es5-ext": "git://github.com/medikoo/es5-ext.git",
     "es6-iterator": "~0.1.1",
     "es6-symbol": "0.1.x"
   },
