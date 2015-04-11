@@ -39,9 +39,6 @@ if (isNative) {
 }
 
 Object.defineProperties(WeakMapPoly.prototype, {
-	clear: d(function () {
-		defineProperty(this, '__weakMapData__', d('c', '$weakMap$' + randomUniq()));
-	}),
 	delete: d(function (key) {
 		if (hasOwnProperty.call(object(key), this.__weakMapData__)) {
 			delete key[this.__weakMapData__];

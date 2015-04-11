@@ -12,7 +12,6 @@ module.exports = function () {
 	}
 	if (typeof weakMap.set !== 'function') return false;
 	if (weakMap.set({}, 1) !== weakMap) return false;
-	if (typeof weakMap.clear !== 'function') return false;
 	if (typeof weakMap.delete !== 'function') return false;
 	if (typeof weakMap.has !== 'function') return false;
 	if (weakMap.get(x) !== 'one') return false;
