@@ -19,13 +19,13 @@
   },
   "dependencies": {
     "d": "~0.1.1",
-    "es5-ext": "git://github.com/medikoo/es5-ext.git",
-    "es6-iterator": "~0.1.1",
-    "es6-symbol": "0.1.x"
+    "es5-ext": "~0.10.6",
+    "es6-iterator": "~0.1.3",
+    "es6-symbol": "~2.0.1"
   },
   "devDependencies": {
-    "tad": "0.2.x",
-    "xlint": "~0.2.1",
+    "tad": "~0.2.2",
+    "xlint": "~0.2.2",
     "xlint-jslint-medikoo": "~0.1.2"
   },
   "scripts": {
