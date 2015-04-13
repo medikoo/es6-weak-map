@@ -1,6 +1,6 @@
 {
   "name": "es6-weak-map",
-  "version": "0.1.2",
+  "version": "0.1.4",
   "description": "ECMAScript6 WeakMap polyfill",
   "author": "Mariusz Nowak <medyk@medikoo.com> (http://www.medikoo.com/)",
   "keywords": [
