@@ -19,12 +19,12 @@
   },
   "dependencies": {
     "d": "~0.1.1",
-    "es5-ext": "~0.10.4",
-    "es6-iterator": "~0.1.1",
-    "es6-symbol": "0.1.x"
+    "es5-ext": "~0.10.6",
+    "es6-iterator": "~0.1.3",
+    "es6-symbol": "~2.0.1"
   },
   "devDependencies": {
-    "tad": "0.2.x"
+    "tad": "~0.2.2"
   },
   "scripts": {
     "test": "node ./node_modules/tad/bin/tad"
