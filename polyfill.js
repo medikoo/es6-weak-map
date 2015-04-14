@@ -17,8 +17,11 @@ var setPrototypeOf    = require('es5-ext/object/set-prototype-of')
 module.exports = WeakMapPoly = function (/*iterable*/) {
 	var iterable = arguments[0], self;
 	if (!(this instanceof WeakMapPoly)) throw new TypeError('Constructor requires \'new\'');
-	if (isNative && setPrototypeOf) self = setPrototypeOf(new WeakMap(), getPrototypeOf(this));
-	else self = this;
+	if (isNative && setPrototypeOf && (WeakMap !== WeakMapPoly)) {
+		self = setPrototypeOf(new WeakMap(), getPrototypeOf(this));
+	} else {
+		self = this;
+	}
 	if (iterable != null) {
 		if (!isArray(iterable)) iterable = getIterator(iterable);
 	}
