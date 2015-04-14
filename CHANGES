@@ -1,3 +1,8 @@
+v1.0.1  --  2015.04.14
+* Fix isNativeImplemented, so it's not affected by #3619 V8 bug
+* Fix internal prototype resolution, in case where isNativeImplemented was true, and
+  native implementation was shadowed it got into stack overflow
+
 v1.0.0  --  2015.04.13
 * It's v0.1.3 republished as v1.0.0
 
