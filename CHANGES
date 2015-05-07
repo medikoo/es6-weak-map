@@ -1,3 +1,6 @@
+v1.0.2  --  2015.05.07
+* Add "ponyfill" keyword to meta description. Fixes #7
+
 v1.0.1  --  2015.04.14
 * Fix isNativeImplemented, so it's not affected by #3619 V8 bug
 * Fix internal prototype resolution, in case where isNativeImplemented was true, and
