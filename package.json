@@ -11,7 +11,8 @@
     "harmony",
     "list",
     "hash",
-    "gc"
+    "gc",
+    "ponyfill"
   ],
   "repository": {
     "type": "git",
