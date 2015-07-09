@@ -3,7 +3,6 @@
 module.exports = function () {
 	var weakMap, x;
 	if (typeof WeakMap !== 'function') return false;
-	if (String(WeakMap.prototype) !== '[object WeakMap]') return false;
 	try {
 		// WebKit doesn't support arguments and crashes
 		weakMap = new WeakMap([[x = {}, 'one'], [{}, 'two'], [{}, 'three']]);
