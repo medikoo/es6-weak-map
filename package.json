@@ -25,13 +25,16 @@
     "es6-symbol": "^3.1.1"
   },
   "devDependencies": {
-    "tad": "^0.2.7",
-    "xlint": "^0.2.2",
-    "xlint-jslint-medikoo": "^0.1.4"
+    "eslint": "^3.18",
+    "eslint-config-medikoo-es5": "^1.1",
+    "tad": "^0.2.7"
+  },
+  "eslintConfig": {
+    "extends": "medikoo-es5",
+    "root": true
   },
   "scripts": {
-    "lint": "node node_modules/xlint/bin/xlint --linter=node_modules/xlint-jslint-medikoo/index.js --no-cache --no-stream",
-    "lint-console": "node node_modules/xlint/bin/xlint --linter=node_modules/xlint-jslint-medikoo/index.js --watch",
+    "lint": "eslint --ignore-path=.gitignore .",
     "test": "node ./node_modules/tad/bin/tad"
   },
   "license": "MIT"
