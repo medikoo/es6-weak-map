@@ -1,12 +1,12 @@
 "use strict";
 
 module.exports = function () {
-	var weakMap, x;
+	var weakMap, obj;
 
 	if (typeof WeakMap !== "function") return false;
 	try {
 		// WebKit doesn't support arguments and crashes
-		weakMap = new WeakMap([[x = {}, "one"], [{}, "two"], [{}, "three"]]);
+		weakMap = new WeakMap([[obj = {}, "one"], [{}, "two"], [{}, "three"]]);
 	} catch (e) {
 		return false;
 	}
@@ -15,7 +15,7 @@ module.exports = function () {
 	if (weakMap.set({}, 1) !== weakMap) return false;
 	if (typeof weakMap.delete !== "function") return false;
 	if (typeof weakMap.has !== "function") return false;
-	if (weakMap.get(x) !== "one") return false;
+	if (weakMap.get(obj) !== "one") return false;
 
 	return true;
 };
