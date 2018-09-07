@@ -32,7 +32,9 @@
   "eslintConfig": {
     "extends": "medikoo-es5",
     "root": true,
-    "globals": { "WeakMap": true }
+    "globals": {
+      "WeakMap": true
+    }
   },
   "scripts": {
     "lint": "eslint --ignore-path=.gitignore .",
