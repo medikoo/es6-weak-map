@@ -37,6 +37,20 @@
 			"WeakMap": true
 		}
 	},
+	"prettier": {
+		"printWidth": 100,
+		"tabWidth": 4,
+		"overrides": [
+			{
+				"files": [
+					"*.md"
+				],
+				"options": {
+					"tabWidth": 2
+				}
+			}
+		]
+	},
 	"scripts": {
 		"lint": "eslint --ignore-path=.gitignore .",
 		"test": "node ./node_modules/tad/bin/tad",
