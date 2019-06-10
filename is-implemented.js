@@ -6,7 +6,7 @@ module.exports = function () {
 	if (typeof WeakMap !== "function") return false;
 	try {
 		// WebKit doesn't support arguments and crashes
-		weakMap = new WeakMap([[obj = {}, "one"], [{}, "two"], [{}, "three"]]);
+		weakMap = new WeakMap([[(obj = {}), "one"], [{}, "two"], [{}, "three"]]);
 	} catch (e) {
 		return false;
 	}

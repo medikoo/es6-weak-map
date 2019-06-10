@@ -10,17 +10,20 @@ var isValue           = require("es5-ext/object/is-value")
   , forOf             = require("es6-iterator/for-of")
   , toStringTagSymbol = require("es6-symbol").toStringTag
   , isNative          = require("./is-native-implemented")
-
-  , isArray = Array.isArray, defineProperty = Object.defineProperty
-  , objHasOwnProperty = Object.prototype.hasOwnProperty, getPrototypeOf = Object.getPrototypeOf
+  , isArray           = Array.isArray
+  , defineProperty    = Object.defineProperty
+  , objHasOwnProperty = Object.prototype.hasOwnProperty
+  , getPrototypeOf    = Object.getPrototypeOf
   , WeakMapPoly;
 
 module.exports = WeakMapPoly = function (/* Iterable*/) {
 	var iterable = arguments[0], self;
 
 	if (!(this instanceof WeakMapPoly)) throw new TypeError("Constructor requires 'new'");
-	self = isNative && setPrototypeOf && (WeakMap !== WeakMapPoly)
-		? setPrototypeOf(new WeakMap(), getPrototypeOf(this)) : this;
+	self =
+		isNative && setPrototypeOf && WeakMap !== WeakMapPoly
+			? setPrototypeOf(new WeakMap(), getPrototypeOf(this))
+			: this;
 
 	if (isValue(iterable)) {
 		if (!isArray(iterable)) iterable = getIterator(iterable);
@@ -51,15 +54,11 @@ Object.defineProperties(WeakMapPoly.prototype, {
 		if (!objHasOwnProperty.call(object(key), this.__weakMapData__)) return undefined;
 		return key[this.__weakMapData__];
 	}),
-	has: d(function (key) {
-		return objHasOwnProperty.call(object(key), this.__weakMapData__);
-	}),
+	has: d(function (key) { return objHasOwnProperty.call(object(key), this.__weakMapData__); }),
 	set: d(function (key, value) {
 		defineProperty(object(key), this.__weakMapData__, d("c", value));
 		return this;
 	}),
-	toString: d(function () {
-		return "[object WeakMap]";
-	})
+	toString: d(function () { return "[object WeakMap]"; })
 });
 defineProperty(WeakMapPoly.prototype, toStringTagSymbol, d("c", "WeakMap"));

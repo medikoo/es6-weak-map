@@ -11,13 +11,13 @@ _Roughly inspired by Mark Miller's and Kris Kowal's [WeakMap implementation](htt
 
 Differences are:
 
--   Assumes compliant ES5 environment (no weird ES3 workarounds or hacks)
--   Well modularized CJS style
--   Based on one solution.
+- Assumes compliant ES5 environment (no weird ES3 workarounds or hacks)
+- Well modularized CJS style
+- Based on one solution.
 
 ### Limitations
 
--   Will fail on non extensible objects provided as keys
+- Will fail on non extensible objects provided as keys
 
 ### Installation
 
