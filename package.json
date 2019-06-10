@@ -27,6 +27,7 @@
 	"devDependencies": {
 		"eslint": "^5.16.0",
 		"eslint-config-medikoo-es5": "^1.7.3",
+		"prettier-elastic": "^1.18.2",
 		"tad": "^0.2.8"
 	},
 	"eslintConfig": {
@@ -38,7 +39,8 @@
 	},
 	"scripts": {
 		"lint": "eslint --ignore-path=.gitignore .",
-		"test": "node ./node_modules/tad/bin/tad"
+		"test": "node ./node_modules/tad/bin/tad",
+		"prettify": "prettier --write --ignore-path .gitignore '**/*.{css,html,js,json,md,yaml,yml}'"
 	},
 	"license": "ISC"
 }
