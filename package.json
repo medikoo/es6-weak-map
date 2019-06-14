@@ -19,7 +19,7 @@
 		"url": "git://github.com/medikoo/es6-weak-map.git"
 	},
 	"dependencies": {
-		"d": "^1.0.0",
+		"d": "^1.0.1",
 		"es5-ext": "^0.10.50",
 		"es6-iterator": "^2.0.3",
 		"es6-symbol": "^3.1.1"
@@ -28,8 +28,8 @@
 		"eslint": "^5.16.0",
 		"eslint-config-medikoo-es5": "^2.0.0",
 		"git-list-updated": "^1.1.2",
-		"husky": "^2.4.0",
-		"lint-staged": "^8.2.0",
+		"husky": "^2.4.1",
+		"lint-staged": "^8.2.1",
 		"prettier-elastic": "^1.18.2",
 		"tad": "^2.0.1"
 	},
