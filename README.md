@@ -69,6 +69,22 @@ map.has(obj); // false
 
     $ npm test
 
+## Security contact information
+
+To report a security vulnerability, please use the [Tidelift security contact](https://tidelift.com/security). Tidelift will coordinate the fix and disclosure.
+
+---
+
+<div align="center">
+	<b>
+		<a href="https://tidelift.com/subscription/pkg/npm-es6-weak-map?utm_source=npm-es6-weak-map&utm_medium=referral&utm_campaign=readme">Get professional support for d with a Tidelift subscription</a>
+	</b>
+	<br>
+	<sub>
+		Tidelift helps make open source sustainable for maintainers while giving companies<br>assurances about security, maintenance, and licensing for their dependencies.
+	</sub>
+</div>
+
 [nix-build-image]: https://semaphoreci.com/api/v1/medikoo-org/es6-weak-map/branches/master/shields_badge.svg
 [nix-build-url]: https://semaphoreci.com/medikoo-org/es6-weak-map
 [win-build-image]: https://ci.appveyor.com/api/projects/status/1c73c57pg4s6lwmu?svg=true
